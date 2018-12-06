@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
+    @post.categories.build(name: 'name1')
+    @post.categories.build(name: 'name2')
   end
 
   def index
